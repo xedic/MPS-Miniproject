@@ -9,16 +9,35 @@ public class WallBuilder : MonoBehaviour {
     public int Depth = 1;
     void Start () {
         PlaceBricks(Width, Height, Depth);
+        PlaceStabilizers(Width, Height, Depth);
+        GetParent().transform.rotation = gameObject.transform.rotation;
     }
     public void ResetWall(){
         DestroyParent();
         PlaceBricks(Width, Height, Depth);
+        PlaceStabilizers(Width, Height, Depth);
+        GetParent().transform.rotation = gameObject.transform.rotation;
+    }
+    public void Update(){
+        if(Input.GetKey(KeyCode.A)){
+            ResetWall();
+        }
+    }
+    private void PlaceStabilizers(int width, int height, int depth){
+        if((height % 2 != 0)){
+             height++;
+        }
+        for(int y = 1; y < height; y += 2){
+            PlaceStabilizerAt(-1, y, (width - 0.5f) * 1);
+            PlaceStabilizerAt(-1, y, (width - 0.5f) * -1);
+            PlaceStabilizerAt(depth, y, (width - 0.5f) * 1);
+            PlaceStabilizerAt(depth, y, (width - 0.5f) * -1);
+        }
     }
     private void PlaceBricks(int width, int height, int depth){
         if((height % 2 != 0)){
              height++;
         }
-        //SpawnPlane(width * 2, depth);
         Object brickPrefabRef = Resources.Load("Prefabs/Brick");
         for(int x = 0; x < depth; x++){
             for(int y = 0; y < height; y++){
@@ -38,7 +57,17 @@ public class WallBuilder : MonoBehaviour {
                 }
             }
         }
-        GetParent().transform.rotation = gameObject.transform.rotation;
+    }
+    private void PlaceStabilizerAt(float x, float y, float z){
+        GameObject stabilizer = (GameObject)GameObject.Instantiate(Resources.Load("Prefabs/Stabilizer"));
+        stabilizer.transform.parent = GetParent().transform;
+        stabilizer.transform.position = GetParent().transform.position;
+        stabilizer.name = "Stabilizer";
+        Vector3 pos = stabilizer.transform.position;
+        pos.z += z;
+        pos.x += x;
+        pos.y += y;
+        stabilizer.transform.position = pos;
     }
 
     private void DestroyParent(){
@@ -50,7 +79,7 @@ public class WallBuilder : MonoBehaviour {
     private GameObject GetParent(){
         if(_parent == null){
             _parent = new GameObject();
-            _parent.name = ParentName;
+            _parent.name = gameObject.name + "_bricks";
             Vector3 pos = _parent.transform.position;
             pos.x = 0;
             pos.y = 0;
