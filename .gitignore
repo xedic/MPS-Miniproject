@@ -20,13 +20,13 @@
 sysinfo.txt
 
 #unityVS
-unity/Assets/UnityVS.meta
-unity/Assets/UnityVS/Editor.meta
-unity/Assets/UnityVS/Editor/SyntaxTree.VisualStudio.Unity.Bridge.dll.meta
-unity/Assets/UnityVS/Editor/SyntaxTree.VisualStudio.Unity.Messaging.dll.meta
-unity/Assets/UnityVS/Editor/UnityVS.VersionSpecific.dll.meta
-unity/Assets/UnityVS/Editor/UnityVS.VersionSpecific.dll
+**/*/UnityVS.meta
+**/*/UnityVS/Editor.meta
+**/*/UnityVS/Editor/SyntaxTree.VisualStudio.Unity.Bridge.dll.meta
+**/*/UnityVS/Editor/SyntaxTree.VisualStudio.Unity.Messaging.dll.meta
+**/*/UnityVS/Editor/UnityVS.VersionSpecific.dll.meta
+**/*/UnityVS/Editor/UnityVS.VersionSpecific.dll
 
 #dont track runtime generated tiles
-unity/Assets/Resources/Textures/Generated/**/*.png
-unity/Assets/Resources/Textures/Generated/**/*.meta
+**/*/Resources/Textures/Generated/**/*.png
+**/*/Resources/Textures/Generated/**/*.meta
