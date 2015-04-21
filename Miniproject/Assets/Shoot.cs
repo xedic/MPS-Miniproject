@@ -5,14 +5,14 @@ public class Shoot : MonoBehaviour {
 
     public GameObject forcePoint;
 
-    float force = 0f;
-    float maxForce = 5000f;
+    float force = 35000f;
+    float maxForce = 35000;
     // Update is called once per frame
     void Update()
     {
         if (Input.GetKey(KeyCode.Space))
         {
-            force += 100f;
+            force += 35000f;
         }
         else if (Input.GetKeyUp(KeyCode.Space))
         {
