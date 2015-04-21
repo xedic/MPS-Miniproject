@@ -25,7 +25,7 @@ public class Shoot : MonoBehaviour {
         }
         else if (Input.GetKeyUp(KeyCode.Space))
         {
-            Debug.Log("testsefshu: " + Mathf.Clamp(force, 0, maxForce));
+            Debug.Log("Force: " + Mathf.Clamp(force, 0, maxForce));
             forcePerc.text = (Mathf.RoundToInt(forceBar.fillAmount * 100)).ToString();
             gameObject.GetComponent<Rigidbody>().AddForceAtPosition(Vector3.up * Mathf.Clamp(force, 0, maxForce), forcePoint.transform.position);
             force = 0;
