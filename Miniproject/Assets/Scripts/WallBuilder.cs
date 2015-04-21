@@ -2,7 +2,7 @@
 using System.Collections;
 
 public class WallBuilder : MonoBehaviour {
-    private const string _parentName = "Bricks";
+    public string ParentName = "Bricks";
     private GameObject _parent = null;
     public int Width = 10;
     public int Height = 10;
@@ -24,17 +24,18 @@ public class WallBuilder : MonoBehaviour {
                         break;
                     }
                     GameObject g = (GameObject)GameObject.Instantiate(brickPrefabRef);
+                    g.transform.parent = GetParent().transform;
                     g.transform.position = GetParent().transform.position;
                     Vector3 pos = g.transform.position;
                     pos.z += z * 2 + 1 * (y % 2);
                     pos.y += y + 0.5f;
                     pos.x += x;
                     g.transform.position = pos;
-                    g.transform.parent = GetParent().transform;
                     g.name = "Brick";
                 }
             }
         }
+        GetParent().transform.rotation = gameObject.transform.rotation;
     }
 
     private void DestroyParent(){
@@ -46,7 +47,7 @@ public class WallBuilder : MonoBehaviour {
     private GameObject GetParent(){
         if(_parent == null){
             _parent = new GameObject();
-            _parent.name = _parentName;
+            _parent.name = ParentName;
             Vector3 pos = _parent.transform.position;
             pos.x = 0;
             pos.y = 0;
