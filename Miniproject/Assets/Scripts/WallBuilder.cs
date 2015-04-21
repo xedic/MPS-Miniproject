@@ -7,16 +7,20 @@ public class WallBuilder : MonoBehaviour {
     public int Width = 10;
     public int Height = 10;
     public int Depth = 1;
+    public void OnDrawGizmos(){
+        Gizmos.color = new Color(1, 0, 0, 1);
+        Gizmos.matrix = gameObject.transform.localToWorldMatrix;
+        Gizmos.DrawCube(Vector3.zero, new Vector3(Width * 2, Height * 2, Depth));
+    }
     void Start () {
-        PlaceBricks(Width, Height, Depth);
-        PlaceStabilizers(Width, Height, Depth);
-        GetParent().transform.rotation = gameObject.transform.rotation;
+        ResetWall();
     }
     public void ResetWall(){
         DestroyParent();
         PlaceBricks(Width, Height, Depth);
         PlaceStabilizers(Width, Height, Depth);
         GetParent().transform.rotation = gameObject.transform.rotation;
+        GetParent().transform.Rotate(Vector3.up, 90);
     }
     public void Update(){
         if(Input.GetKey(KeyCode.A)){
@@ -28,10 +32,10 @@ public class WallBuilder : MonoBehaviour {
              height++;
         }
         for(int y = 1; y < height; y += 2){
-            PlaceStabilizerAt(-1, y, (width - 0.5f) * 1);
-            PlaceStabilizerAt(-1, y, (width - 0.5f) * -1);
-            PlaceStabilizerAt(depth, y, (width - 0.5f) * 1);
-            PlaceStabilizerAt(depth, y, (width - 0.5f) * -1);
+            PlaceStabilizerAt(-0.5f - depth / 2.0f, y, (width - 0.5f) * 1);
+            PlaceStabilizerAt(-0.5f - depth / 2.0f, y, (width - 0.5f) * -1);
+            PlaceStabilizerAt(depth / 2.0f + 0.5f, y, (width - 0.5f) * 1);
+            PlaceStabilizerAt(depth / 2.0f + 0.5f, y, (width - 0.5f) * -1);
         }
     }
     private void PlaceBricks(int width, int height, int depth){
@@ -51,7 +55,7 @@ public class WallBuilder : MonoBehaviour {
                     Vector3 pos = g.transform.position;
                     pos.z += z * 2 + 1 * (y % 2) - width + 1;
                     pos.y += y + 0.5f;
-                    pos.x += x;
+                    pos.x += -depth / 2.0f + x + 0.5f;
                     g.transform.position = pos;
                     g.name = "Brick";
                 }
