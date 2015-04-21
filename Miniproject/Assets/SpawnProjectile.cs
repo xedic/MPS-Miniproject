@@ -1,16 +1,10 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class SpawnProjectile : MonoBehaviour {
-
-	// Use this for initialization
-	void Start () {
-	
-	}
-	
+public class SpawnProjectile : MonoBehaviour {	
 	// Update is called once per frame
 	void Update () {
-        if (Input.GetKeyDown(KeyCode.S))
+        if (Input.GetKeyDown(KeyCode.Alpha1))
         {
             GameObject temp = GameObject.CreatePrimitive(PrimitiveType.Sphere);
             temp.transform.position = gameObject.transform.position;
