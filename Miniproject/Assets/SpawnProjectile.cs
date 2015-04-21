@@ -12,7 +12,7 @@ public class SpawnProjectile : MonoBehaviour {
 	void Update () {
         if (Input.GetKeyDown(KeyCode.S))
         {
-            GameObject temp = GameObject.CreatePrimitive(PrimitiveType.Cube);
+            GameObject temp = GameObject.CreatePrimitive(PrimitiveType.Sphere);
             temp.transform.position = gameObject.transform.position;
             temp.AddComponent<Rigidbody>();
         }
