@@ -6,6 +6,7 @@ public class Shoot : MonoBehaviour {
     public GameObject forcePoint;
 
     float force = 0f;
+    float maxForce = 5000f;
     // Update is called once per frame
     void Update()
     {
@@ -15,8 +16,8 @@ public class Shoot : MonoBehaviour {
         }
         else if (Input.GetKeyUp(KeyCode.Space))
         {
-            Debug.Log("testsefshu: " + force);
-            gameObject.GetComponent<Rigidbody>().AddForceAtPosition(Vector3.up * force, forcePoint.transform.position);
+            Debug.Log("testsefshu: " + Mathf.Clamp(force, 0, maxForce));
+            gameObject.GetComponent<Rigidbody>().AddForceAtPosition(Vector3.up * Mathf.Clamp(force, 0, maxForce), forcePoint.transform.position);
             force = 0;
         }
     }
