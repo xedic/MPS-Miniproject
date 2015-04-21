@@ -22,11 +22,6 @@ public class WallBuilder : MonoBehaviour {
         GetParent().transform.rotation = gameObject.transform.rotation;
         GetParent().transform.Rotate(Vector3.up, 90);
     }
-    public void Update(){
-        if(Input.GetKey(KeyCode.A)){
-            ResetWall();
-        }
-    }
     private void PlaceStabilizers(int width, int height, int depth){
         if((height % 2 != 0)){
              height++;
