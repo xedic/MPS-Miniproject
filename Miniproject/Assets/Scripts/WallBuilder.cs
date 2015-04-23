@@ -13,6 +13,10 @@ public class WallBuilder : MonoBehaviour {
         Gizmos.DrawCube(new Vector3(0, Height / 2.0f, 0), new Vector3(Width * 2, Height, Depth));
     }
     void Start () {
+        RaycastHit hit;
+        if(Physics.Raycast(transform.position, Vector3.down, out hit, 10)){
+            transform.position = hit.point;
+        }
         ResetWall();
     }
     public void ResetWall(){
