@@ -10,7 +10,7 @@ public class WallBuilder : MonoBehaviour {
     public void OnDrawGizmos(){
         Gizmos.color = new Color(1, 0, 0, 1);
         Gizmos.matrix = gameObject.transform.localToWorldMatrix;
-        Gizmos.DrawCube(Vector3.zero, new Vector3(Width * 2, Height * 2, Depth));
+        Gizmos.DrawCube(new Vector3(0, Height / 2.0f, 0), new Vector3(Width * 2, Height, Depth));
     }
     void Start () {
         ResetWall();
