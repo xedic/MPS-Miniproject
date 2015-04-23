@@ -9,7 +9,7 @@ public class Shoot : MonoBehaviour {
     public Text forcePerc;
 
     float force = 0f;
-    float maxForce = 35000;
+    float maxForce = 15000;
     float forceFactor = 1;
     // Update is called once per frame
     void Update()
@@ -17,11 +17,11 @@ public class Shoot : MonoBehaviour {
         if (Input.GetKey(KeyCode.Space))
         {
             if(force <= maxForce) {
-                force += 100 * forceFactor;
+                force += 50 * forceFactor;
                 forceFactor++;
             }
                 
-            forceBar.fillAmount = force / (35000 / 100) / 100;
+            forceBar.fillAmount = force / (maxForce / 100) / 100;
         }
         else if (Input.GetKeyUp(KeyCode.Space))
         {
