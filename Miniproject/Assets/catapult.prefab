@@ -12,7 +12,7 @@ GameObject:
   - 59: {fileID: 5954002}
   m_Layer: 0
   m_Name: throwbar
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -48,7 +48,7 @@ GameObject:
   - 23: {fileID: 2376680}
   m_Layer: 0
   m_Name: Sides
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -84,7 +84,7 @@ GameObject:
   - 23: {fileID: 2331686}
   m_Layer: 0
   m_Name: movebar
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -102,7 +102,7 @@ GameObject:
   - 23: {fileID: 2373932}
   m_Layer: 0
   m_Name: Sides
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -117,7 +117,7 @@ GameObject:
   - 4: {fileID: 481000}
   m_Layer: 0
   m_Name: tower
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -133,7 +133,7 @@ GameObject:
   - 114: {fileID: 11468080}
   m_Layer: 0
   m_Name: SpawnProjectile
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -151,7 +151,7 @@ GameObject:
   - 23: {fileID: 2362352}
   m_Layer: 0
   m_Name: Cube 5
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -184,7 +184,7 @@ GameObject:
   - 4: {fileID: 460242}
   m_Layer: 0
   m_Name: wheelSet
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -220,7 +220,7 @@ GameObject:
   - 23: {fileID: 2316590}
   m_Layer: 0
   m_Name: arm
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -235,7 +235,7 @@ GameObject:
   - 4: {fileID: 466122}
   m_Layer: 0
   m_Name: ForcePoint
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -253,7 +253,7 @@ GameObject:
   - 64: {fileID: 6475760}
   m_Layer: 0
   m_Name: bucket
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -268,7 +268,7 @@ GameObject:
   - 4: {fileID: 404462}
   m_Layer: 0
   m_Name: base
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -323,7 +323,7 @@ GameObject:
   - 23: {fileID: 2323990}
   m_Layer: 0
   m_Name: Bottom
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -341,7 +341,7 @@ GameObject:
   - 23: {fileID: 2395126}
   m_Layer: 0
   m_Name: Sides
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -358,7 +358,7 @@ GameObject:
   - 114: {fileID: 11460878}
   m_Layer: 0
   m_Name: Spoon
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -391,7 +391,7 @@ GameObject:
   - 4: {fileID: 400730}
   m_Layer: 0
   m_Name: wheelSet 1
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -424,7 +424,7 @@ GameObject:
   - 4: {fileID: 423862}
   m_Layer: 0
   m_Name: SquareBucket
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -442,7 +442,7 @@ GameObject:
   - 23: {fileID: 2364386}
   m_Layer: 0
   m_Name: Cube 5
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -478,7 +478,7 @@ GameObject:
   - 23: {fileID: 2362864}
   m_Layer: 0
   m_Name: Sides
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -496,7 +496,7 @@ GameObject:
   - 23: {fileID: 2344432}
   m_Layer: 0
   m_Name: Cube 4
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -531,7 +531,7 @@ GameObject:
   - 114: {fileID: 11444026}
   m_Layer: 0
   m_Name: catapult
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -769,8 +769,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 194602}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -8.85999966, y: .899999976, z: -27.3500004}
+  m_LocalRotation: {x: 0, y: .961546063, z: 0, w: .274643928}
+  m_LocalPosition: {x: 4.17999983, y: .699999988, z: -2.50999999}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 487156}
@@ -823,7 +823,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 127532}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: .507671595, y: 1.40039229, z: -.294441104}
+  m_LocalPosition: {x: .50999999, y: .159999996, z: -.289999992}
   m_LocalScale: {x: 2.25, y: .25, z: .25}
   m_Children: []
   m_Father: {fileID: 446342}
@@ -1707,7 +1707,7 @@ HingeJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -.120000362, y: -.592941165, z: -5.15719366}
+  m_ConnectedAnchor: {x: -.119999573, y: -.592941165, z: -5.15719461}
   m_UseSpring: 0
   m_Spring:
     spring: 0
@@ -1958,6 +1958,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 286d801bdda2ca24c9d0781c1542d930, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  moveBar: {fileID: 127532}
 --- !u!114 &11460878
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1970,6 +1971,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   forcePoint: {fileID: 148548}
+  forceBar: {fileID: 0}
+  forcePerc: {fileID: 0}
 --- !u!114 &11468080
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1981,6 +1984,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 57198dc80c451014d8b4c0cf94b3012e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bomb: {fileID: 115326, guid: bde3daabcc248db4c8497b32417901b3, type: 2}
 --- !u!124 &12400980
 Behaviour:
   m_ObjectHideFlags: 1

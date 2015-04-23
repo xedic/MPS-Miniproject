@@ -4,7 +4,7 @@ using System.Collections;
 public class bomb : MonoBehaviour {
 
     public float radius = 10.0F;
-    public float power = 10.0F;
+    public float power = 0.1F;
     public GameObject explosionParticle;
 
     void Start()
@@ -24,7 +24,7 @@ public class bomb : MonoBehaviour {
             foreach (Collider hit in colliders)
             {
                 if (hit && hit.GetComponent<Rigidbody>())
-                    hit.GetComponent<Rigidbody>().AddExplosionForce(power, explosionPos, radius, 3.0F);
+                    hit.GetComponent<Rigidbody>().AddExplosionForce(power, explosionPos, radius, 3F);
 
             }
             GameObject t = Instantiate(explosionParticle);
