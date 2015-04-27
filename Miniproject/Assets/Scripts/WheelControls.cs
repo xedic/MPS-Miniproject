@@ -42,8 +42,8 @@ public class WheelControls : MonoBehaviour {
 
 
         if (Input.GetKey(KeyCode.L) && moveBar.localPosition.y >= movebarMinY)
-            moveBar.position -= new Vector3(0f, .01f, 0f);
+            moveBar.position -= new Vector3(0f, .1f, -0.1f);
         else if (Input.GetKey(KeyCode.O) && moveBar.localPosition.y <= movebarMaxY)
-            moveBar.position += new Vector3(0f, .01f, 0f);
+            moveBar.position += new Vector3(0f, .1f, -0.1f);
 	}
 }
