@@ -2,14 +2,11 @@
 using System.Collections;
 
 public class bomb : MonoBehaviour {
-
-    private AudioSource _audioSource;
     public float radius = 10.0F;
     public float power = 0.1F;
     public GameObject explosionParticle;
 
     void Start() {
-        _audioSource = GetComponent<AudioSource>();
     }
 
     void OnCollisionEnter(Collision c)
@@ -19,7 +16,6 @@ public class bomb : MonoBehaviour {
         if (c.gameObject.tag != "Player")
         {
             CameraShake.Shake();
-            _audioSource.Play();
             foreach (Collider hit in colliders)
             {
                 if (hit && hit.GetComponent<Rigidbody>())
