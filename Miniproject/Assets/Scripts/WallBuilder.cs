@@ -2,7 +2,11 @@
 using System.Collections;
 
 public class WallBuilder : MonoBehaviour {
-    public string ParentName = "Bricks";
+    public enum BrickType{
+        BRICK,
+        STEEL
+    };
+    public BrickType type = BrickType.BRICK;
     private GameObject _parent = null;
     public int Width = 10;
     public int Height = 10;
@@ -41,14 +45,19 @@ public class WallBuilder : MonoBehaviour {
         if((height % 2 != 0)){
              height++;
         }
-        Object brickPrefabRef = Resources.Load("Prefabs/Brick");
+        Object prefabRef;
+        if(type == BrickType.BRICK){
+            prefabRef = Resources.Load("Prefabs/Brick");
+        }else{
+            prefabRef = Resources.Load("Prefabs/Steel");
+        }
         for(int x = 0; x < depth; x++){
             for(int y = 0; y < height; y++){
                 for(int z = 0; z < width; z++){
                     if((y % 2) == 1 && z == width - 1){
                         break;
                     }
-                    GameObject g = (GameObject)GameObject.Instantiate(brickPrefabRef);
+                    GameObject g = (GameObject)GameObject.Instantiate(prefabRef);
                     g.transform.parent = GetParent().transform;
                     g.transform.position = GetParent().transform.position;
                     Vector3 pos = g.transform.position;

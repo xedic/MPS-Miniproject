@@ -21,6 +21,7 @@ public class bomb : MonoBehaviour {
         Collider[] colliders = Physics.OverlapSphere(explosionPos, radius);
         if (c.gameObject.tag != "Player")
         {
+            CameraShake.Shake();
             foreach (Collider hit in colliders)
             {
                 if (hit && hit.GetComponent<Rigidbody>())
