@@ -9,7 +9,7 @@ public class Shoot : MonoBehaviour {
     public Text forcePerc;
 
     float force = 0f;
-    float maxForce = 15000;
+    float maxForce = 10000;
     float forceFactor = 1;
     // Update is called once per frame
     void Update()
