@@ -90,7 +90,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   radius: 3000
-  power: 100
+  power: 500
   explosionParticle: {fileID: 100010, guid: 41ada9e6de3507647b152aa170420c6f, type: 2}
   dust: {fileID: 100000, guid: 1f7aa4d40edff6e48b549003cad031e1, type: 2}
   flare: {fileID: 180232, guid: f67049fdb4684f54b83188974dc881e6, type: 2}

@@ -138,6 +138,10 @@ Prefab:
       propertyPath: nuke
       value: 
       objectReference: {fileID: 115326, guid: 75c3491dad4e350478074a09df85bff5, type: 2}
+    - target: {fileID: 5443692, guid: 42543b77f7cc7874393585d8a392c9f1, type: 2}
+      propertyPath: m_Mass
+      value: 2000
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 42543b77f7cc7874393585d8a392c9f1, type: 2}
   m_IsPrefabParent: 0
@@ -324,7 +328,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8da6afad842c4163827b2d14dcfca42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  type: 0
+  type: 1
   Width: 10
   Height: 30
   Depth: 2
@@ -641,7 +645,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8da6afad842c4163827b2d14dcfca42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  type: 0
+  type: 1
   Width: 10
   Height: 30
   Depth: 2
