@@ -9,6 +9,7 @@ public class shittyControls : MonoBehaviour {
     float movebarMaxY = 1.86f;
     float movebarMinY = 0.15f;
 
+
 	// Update is called once per frame
 	void Update () {
         float turn = Input.GetAxis("Horizontal");

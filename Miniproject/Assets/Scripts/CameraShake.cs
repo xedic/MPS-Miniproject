@@ -14,6 +14,12 @@ public class CameraShake : MonoBehaviour {
         cs.StartCoroutine(cs._Shake(0.25f, 0.008f));
     }
 
+    static public void ShakeViolently()
+    {
+        CameraShake cs = GetInstance();
+        cs.StartCoroutine(cs._Shake(.5f, 1f));
+    }
+
     private IEnumerator _Shake(float magnitude, float duration){
         GameObject cam = (GameObject)GameObject.Find("MainCamera");
         while(magnitude > 0){
